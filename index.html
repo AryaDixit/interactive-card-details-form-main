@@ -1,51 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+    <!-- displays site properly based on user's device -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/style.css" />
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  000
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
-  Cardholder Name
-  e.g. Jane Appleseed
+    <script src="./index.js" defer></script>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <section class="gradient-container">
+        <div class="cards-parent">
+          <div class="card-1">
+            <div class="input-show">
+              <div class="circles">
+                <div class="circle"></div>
+                <div class="s-circle"></div>
+              </div>
+              <div class="card-info">
+                <span class="card-num">0000 0000 0000 0000</span>
+                <div class="wrap-name-date">
+                  <span class="card-holder">JANE APPLESEED</span>
+                  <div class="exp-date">
+                    <span class="month">00</span>/<span class="year">00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-2">
+            <div class="cvv">000</div>
+          </div>
+        </div>
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Arya Dixit</a>.
+        </div>
+      </section>
 
-  CVC
-  e.g. 123
+      <section class="nongradient-container">
+        <div class="form-parent">
+          <form class="details">
+            <div class="iput-name wrapper">
+              <label for="name">CARDHOLDER NAME</label>
+              <input
+                type="text"
+                class="input-style"
+                placeholder="e.g. Jane Appleseed"
+                id="name"
+              />
+            </div>
 
-  Confirm
+            <div class="input-number wrapper">
+              <label for="num">CARD NUMBER</label>
+              <input
+                type="text"
+                placeholder="e.g. 1234 5678 9123 0000"
+                id="num"
+                class="input-style"
+                pattern="^\d{4}( \d{4}){0,3}$"
+                maxlength="19"
+              />
+            </div>
 
-  <!-- Completed state start -->
+            <div class="input-data-2">
+              <div class="input-date wrapper">
+                <div class="box-input">
+                  <label for="ex-date">EXP. DATE (MM/YY)</label>
+                  <div class="mon-year">
+                    <input
+                      type="number"
+                      class="input-style ex"
+                      placeholder="MM"
+                      id="mon"
+                    />
+                    <input
+                      type="number"
+                      class="input-style ex"
+                      placeholder="YY"
+                      id="years"
+                    />
+                  </div>
+                </div>
+                <div class="box-input">
+                  <label for="cvc">CVC</label>
+                  <input
+                    type="number"
+                    class="input-style"
+                    placeholder="e.g. 123"
+                    id="cvc"
+                  />
+                </div>
+              </div>
+            </div>
 
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            <div class="btn-confirm">
+              <button onclick="handleClick()">Confirm</button>
+            </div>
+          </form>
+        </div>
+        <div class="ty-section">
+          <div class="ty-text-section">
+            <svg
+              width="80"
+              height="80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="40" cy="40" r="40" fill="url(#a)" />
+              <path
+                d="M28 39.92 36.08 48l16-16"
+                stroke="#fff"
+                stroke-width="3"
+              />
+              <defs>
+                <linearGradient
+                  id="a"
+                  x1="-23.014"
+                  y1="11.507"
+                  x2="0"
+                  y2="91.507"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#6348FE" />
+                  <stop offset="1" stop-color="#610595" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <h1>THANK YOU!</h1>
+            <p>We've added your card details.</p>
+          </div>
+          <div class="btn-confirm" onclick="handleClick2()">
+            <button>Continue</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>

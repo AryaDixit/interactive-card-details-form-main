@@ -1,0 +1,227 @@
+body,
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+/* color variables */
+
+:root {
+  --LinearGradient1: hsl(249, 99%, 64%);
+  --LinearGradient2: hsl(278, 94%, 30%);
+  --Red: hsl(0, 100%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --LightGrayishViolet: hsl(270, 3%, 87%);
+  --DarkGrayishViolet: hsl(279, 6%, 55%);
+  --VeryDarkViolet: hsl(278, 68%, 11%);
+}
+
+/*dropdown hidden for number inputs*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* main-container styles */
+
+.main-container {
+  display: flex;
+  min-height: 130.5vh;
+}
+
+/* gradient Section styles */
+
+.gradient-container {
+  width: 33.65%;
+  background: url("../images/bg-main-desktop.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* cards Section styles */
+
+.cards-parent {
+  position: absolute;
+  top: 13.8rem;
+  left: 12rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.7rem;
+}
+
+.card-1 {
+  background: url(../images/bg-card-front.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 32.9rem;
+  height: 17.9rem;
+  border-radius: 1rem;
+}
+
+.card-2 {
+  background: url(../images/bg-card-back.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 32.9rem;
+  height: 17.9rem;
+  border-radius: 1rem;
+  transform: translateX(7rem);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1%;
+  left: 18%;
+}
+
+/* nongradient section styles */
+
+.nongradient-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66.35%;
+  height: auto;
+  padding: 12.35rem 0;
+}
+
+/* input details styles */
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 40%;
+  margin-left: 9rem;
+}
+
+/* input wrapper styles */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: var(--VeryDarkViolet);
+  width: 100%;
+}
+
+.input-date {
+  display: flex;
+  flex-direction: row;
+  gap: 1.7rem;
+}
+
+.box-input {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.input-style {
+  padding: 1rem;
+  font-size: 21px;
+  border: 1px solid var(--LightGrayishViolet);
+  border-radius: 7px;
+  outline: none;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.input-style:focus {
+  border-color: var(--VeryDarkViolet);
+}
+
+/* input date and cvv styles */
+
+.input-data-2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.2rem;
+}
+
+.mon-year {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+}
+
+.mon-year input {
+  width: 50%;
+}
+
+/* button styles */
+.btn-confirm button {
+  padding: 1.2rem 11.55rem;
+  background-color: var(--VeryDarkViolet);
+  border-radius: 7px;
+  color: var(--White);
+  margin-top: 1.3rem;
+}
+/*input display on card styling*/
+
+.input-show {
+  padding: 2.1rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+
+/*circle styles*/
+.circle {
+  border-radius: 50%;
+  background-color: var(--White);
+  height: 60px;
+  width: 60px;
+}
+
+.s-circle {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  border: 1px solid var(--White);
+  margin-top: 0.9rem;
+}
+
+.circles {
+  display: flex;
+  gap: 1.2rem;
+}
+
+/*name and date on change styling*/
+.wrap-name-date {
+  display: flex;
+  justify-content: space-between;
+  color: var(--White);
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-num {
+  color: var(--White);
+  font-size: 40px;
+  height: 2.7rem;
+}
+
+.cvv {
+  margin: 8rem 0 0 26rem;
+  color: var(--White);
+}
+
+/*Thank You section*/
+.ty-text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
